@@ -1,0 +1,158 @@
+<!-- Exo 7 : algo complexe avec boucle et conditions partie 1 -->
+<!-- <html>
+  <meta charset="UTF-8">
+    <head>
+        <script>
+        "use strict";
+        // onclick="open("http...")"
+        function google() {
+            open("http://www.google.com","Google","directories=no,menubar=no");
+        }
+
+        function bing() {
+            open("http://www.bing.com","Bing","directories=no,menubar=no");
+        }
+
+        function ddg() {
+            open("http://www.duckduckgo.com","DuckDuckGo","directories=no,menubar=no");
+        }
+        </script>
+
+    </head>
+    <body>
+        <h1 onclick="google()">1er titre</h1>
+        <p onclick="bing()">p1</p>
+        <p2 onmouseover="ddg()">p2</p2>
+    </body>
+</html> -->
+
+<!-- exo 8 p2 -->
+<!-- <html>
+  <meta charset="UTF-8">
+  <head>
+    <script>
+      "use strict";
+      // utiliser confirm plutôt avec true
+      function a() {
+        var b = prompt("Saisir une chaine de caractères, par exemple google ou bing");
+        console.log(b);
+        if (b == "google") {
+          open("http://www.google.com", "Google", "directories=no,menubar=no");
+        }
+        if (b == "bing") {
+          open("http://www.bing.com", "Bing", "directories=no,menubar=no");
+        }
+        
+      }
+    </script>
+  </head>
+  <body>
+    <h1>1er titre</h1>
+    <p onclick="a()">p1</p>
+    <p>p2</p>
+  </body>
+</html> -->
+
+<!-- exo 9 p3
+<html>
+  <meta charset="UTF-8">
+  <head>
+    <script>
+        // encodeURI() ou créer une variable et concaténer pour convertir en http
+      "use strict";
+
+      function b() {
+        var a = prompt("Souhaitez-vous ouvrir une fenêtre vers Google ?");
+        if (a == "") {
+          open("http://www.google.com", "Google", "directories=no,menubar=no");
+        } else {
+          var c = prompt("Veuillez saisir l'URL d'un site alternatif");
+          if (c == "bing") {
+            open("http://www.bing.com", "Bing", "directories=no,menubar=no");
+          } else {
+            alert("Tant pis !");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>1er titre</h1>
+    <p onclick="b()">p1</p>
+    <p>p2</p>
+  </body>
+</html> -->
+
+<!-- alternative exo9
+<html>
+  <meta charset="UTF-8">
+    <head>
+        <script>
+            "use strict";
+            function a() {
+                var b = prompt("Saisir une URL valide (au bon format)");
+                open(b);
+            }
+        </script>
+    </head>
+    <body>
+        <h1 onclick="a()">1er titre</h1>
+        <p>p1</p>
+        <p>p2</p>
+    </body>
+</html> -->
+
+<!-- exo 10 p4
+<html>
+  <meta charset="UTF-8">
+  <head>
+    <script>
+      "use strict";
+      function b() {
+        var a = prompt("Souhaitez-vous ouvrir une fenêtre vers Google ?");
+        if (a == "") {
+          open("http://www.google.com", "Google", "directories=no,menubar=no");
+        } else {
+          var c = prompt("Veuillez saisir l'URL d'un site alternatif");
+          if (c == "bing") {
+            open("http://www.bing.com", "Bing", "directories=no,menubar=no");
+          } else {
+            alert("Tant pis !");
+            b();
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>1er titre</h1>
+    <p onclick="b()">p1</p>
+    <p>p2</p>
+  </body>
+</html> -->
+
+<!-- exo 11 boucle à pop-ups
+<html>
+  <meta charset="UTF-8" />
+  <head>
+    <script>
+      "use strict";
+      var compteur = 0;
+      var urlTab = [
+        "http://www.google.fr",
+        "http://www.bing.com",
+        "http://www.renault.fr"
+      ];
+
+      while (compteur < urlTab.length) {
+        open(urlTab[compteur]);
+        compteur++;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>1er titre</h1>
+    <p>p1</p>
+    <p>p2</p>
+  </body>
+</html> -->

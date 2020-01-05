@@ -1,0 +1,39 @@
+<html>
+    <body>
+    <script>
+    var objet = {
+        prop1 : function cent(n){
+            alert(n);
+            alert(n*100);
+        },
+        prop2 : function text(t){
+            alert(t);
+            alert(t + " " + "hello !");
+        },
+        prop3 : function tab3(){
+            T = ["a", "b", "c", "d"];
+            alert(T[1]);
+            alert(T[2]=T[1]);
+            alert(T);
+            alert(T[2]);
+        },
+        prop4 : function objects(){
+            var object = {
+                p1 : 1,
+                p2 : 2,
+                p3 : 3,
+                p4 : this.p1 + this.p2 + this.p3 + this.p5,
+                p5 : 5
+            };
+            object.p4();
+            
+        }
+    };
+    objet.prop1(2);
+    objet.prop2("texto");
+    objet.prop3();
+    //objet.prop4();
+    </script>
+
+    </body>
+</html>

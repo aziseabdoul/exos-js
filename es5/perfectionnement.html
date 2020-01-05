@@ -1,0 +1,71 @@
+<html>
+    <head>
+
+    </head>
+    <body onbeforeunload="fermeture()">
+        <script>
+            var leNombreEst = function(nombre) {
+                var suffixe = " millions !";
+                return function(prefixe) {
+                    alert(prefixe + nombre + suffixe);
+                }
+            };
+            var ecrirePhrase = leNombreEst(5);
+            ecrirePhrase("je serais heureux d'avoir ");
+        
+        </script>
+
+        <script>
+        var laLettreEst = function(lettre) {
+            var mots = [8, "je me leve", 13, "je dejeune", 23, "je vais dormir"];
+            return function(prefixe) {
+                //mots.splice(1, 0, 'z');
+                //alert(prefixe + tableau[0] + lettre + tableau[1] + tableau[2] + lettre + tableau[3] + tableau[4] + lettre + tableau[5]);
+                //for(i=0;i<mots.length;i++) {
+                    //alert(mots[i]);
+                //}
+                
+            }
+        };
+        var ecrirePhrase = laLettreEst("h");
+        ecrirePhrase("il est ");
+
+        function moy3() {
+            alert((arguments[0]+arguments[1]+arguments[2])/2);
+        }
+
+        moy3(1, 2, 3);
+
+        function moy5() {
+            alert((arguments[0]+arguments[1]+arguments[2]+arguments[3]+arguments[4])/2);
+        }
+
+        moy5(1, 2, 3, 4, 5);
+
+        function moy10() {
+            alert((arguments[0]+arguments[1]+arguments[2]+arguments[3]+arguments[4]+arguments[5]+arguments[6]+arguments[7]+arguments[8]+arguments[9])/2);
+        }
+
+        moy10(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        //var number = parseInt(prompt("saisir un nombre"));
+
+
+        function setTimeout1() {
+            setTimeout(function(){
+                alert("a");
+                }, 3000);
+                };
+                
+        function fermeture() {
+            alert("b");
+        };
+        
+
+        
+    
+    </script>
+
+    <p onclick="setTimeout1()">para</p>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!-- exo 1 chainage d'execution
+<html>
+  <head>
+    <script>
+      "use strict";
+      var objLitt = {
+        m1: function() {
+          console.log("a");
+          return this;
+        },
+        m2: function() {
+          console.log("b");
+          return this;
+        },
+        m3: function() {
+          console.log("c");
+          return this;
+        }
+      };
+
+      objLitt.m1().m2().m3();
+    </script>
+
+    <script>
+      function usine() {
+        return {
+          m1: function() {
+            console.log("a");
+            return this;
+          },
+          m2: function() {
+            console.log("b");
+            return this;
+          },
+          m3: function() {
+            console.log("c");
+            return this;
+          }
+        };
+      }
+
+      usine().m1().m2().m3();
+    </script>
+
+    <script>
+      function $() {
+        return {
+          m1: function() {
+            console.log("a");
+            return this;
+          },
+          m2: function() {
+            console.log("b");
+            return this;
+          },
+          m3: function() {
+            console.log("c");
+            return this;
+          }
+        };
+      }
+
+      $().m1().m2().m3();
+    </script>
+  </head>
+
+  <body></body>
+</html> -->
+
+<!-- exo 3 gestion asynchrone des modules
+<html>
+  <head>
+    <script>
+      "use strict";
+    //   function toto() {
+    //     var s = document.createElement("script");
+    //     s.type = "text/javascript";
+    //     s.async = true;
+    //     s.src = "fantome.js";
+    //     document.body.appendChild(s);
+    //   }
+
+    </script>
+  </head>
+  <body>
+    <p onclick="toto()">p1</p>
+    <p onclick="">p2</p>
+  </body>
+</html> -->

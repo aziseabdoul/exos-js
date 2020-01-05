@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function nxt() {
+    var val = (parseInt(document.getElementById("slide").style.marginLeft, 10) || 0) + 2;
+    document.getElementById("slide").style.marginLeft = val + 2 +'px';
+}
+        </script>
+    <p id="slide" onclick="nxt()">test</p>
+</body>
+</html>

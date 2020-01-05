@@ -1,0 +1,357 @@
+<!--<!DOCTYPE html exo 15 intro gestion des ev>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>-->
+<!--<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>-->
+<!--<script>
+        "use strict";
+        function charge(){
+            alert("ce message est affiché au chargement du document");
+        }
+        function survol(){
+            alert("ce message est affiché lorsqu'on survole ce point");
+        }
+        function neSurvolePlus(){
+            alert("ce message est affiché lorsqu'on ne survole plus ce point");
+        }
+        function champSaisie(){
+            alert("vous avez sélectionné le champ de saisie");
+        }
+    </script>
+</head>
+<body onload="charge()"> 
+    <h1>Titre principal</h1> 
+    <ul>   
+        <li onmouseover="survol()">Premier point</li>   
+        <li>Deuxième point</li>   
+        <li>Troisième point</li> 
+    </ul> 
+    <div>   
+        <div>     
+            <h2>       
+                <span>1</span>. Titre de la première section     
+            </h2>     
+            <p>       
+                <span>1.1</span>. Premier paragraphe de la première section et un <a href="#">lien</a>.     
+            </p>     
+            <p>       
+                <span onmouseout="neSurvolePlus()">1.2</span>. Deuxième paragraphe de la deuxième section et un <a href="#">lien</a>.     
+            </p>   
+        </div>   
+        <div>     
+            <h2>       
+                <span>2</span>. Titre de la deuxième section     
+            </h2>     
+            <p>       
+                <span>2.1</span>. Premier paragraphe de la deuxième section. 
+</p>     
+<p>       
+    <span>2.2</span>. Deuxième paragraphe de la deuxième section.     
+</p>   
+</div>   
+<div>     
+    <h2>       
+        <span>3</span>. Titre de la troisième section     
+    </h2>     
+    <p>       
+        <span>3.1</span>. Premier paragraphe de la troisième section.     
+    </p>     
+    <p>       
+        <span>3.2</span>. Deuxième paragraphe de la troisième section.     
+    </p>   
+</div>   
+<form method="http://www.google.com" action="GET">     
+    <input name="q" type="text" value="" onfocus="champSaisie()" />   
+</form> 
+</div> 
+</body>    
+    
+</html>-->
+
+<!--<html exo 16 combiner anim et gestion ev a finir>
+  <head>
+    <script>
+      window.onload = function() {
+        window.onkeydown = function(event) {
+          var code = event.keyCode;
+          switch (code) {
+            case 37:
+              var val =
+                (parseInt(
+                  document.getElementById("contenu").style.marginLeft,
+                  10
+                ) || 0) - 2;
+              document.getElementById("contenu").style.marginLeft =
+                val + "px";
+              break;
+            case 38:
+            var val =
+                (parseInt(
+                  document.getElementById("contenu").style.top,
+                  10
+                ) || 0) - 2;
+              document.getElementById("contenu").style.top = val + "px";
+              break;
+            case 39:
+              var val =
+                (parseInt(
+                  document.getElementById("contenu").style.marginLeft,
+                  10
+                ) || 0) + 2;
+              document.getElementById("contenu").style.marginLeft =
+                val + 2 + "px";
+              break;
+            case 40:
+            var val =
+                (parseInt(
+                  document.getElementById("contenu").style.top,
+                  10
+                ) || 0) + 2;
+              document.getElementById("contenu").style.top = val + "px";
+              break;
+              case 13:
+            var val =
+                (parseInt(
+                  document.getElementById("contenu").style.top,
+                  10
+                ) || 0) + 2;
+              document.getElementById("contenu").style.top = val + "px";
+              break;
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Play !</h1>
+    <div>
+      <div id="container" class="masque">
+        <img id="contenu" class="sprite" src="git rebase.png" />
+      </div>
+    </div>
+    <style>
+      #container {
+        position: absolute;
+      }
+      #contenu {
+        position: absolute;
+        overflow: hidden;
+      }
+    </style>
+  </body>
+</html>-->
+
+<!--<html exo 17 creer une nouvelle branche du dom p1>
+  <body>
+    <head>
+      <script>
+        "use strict";
+        function newDomBranch() { 
+            var img = document.createElement('img'); 
+            img.src = "git rebase.png";
+            img.title = "illustration d'un git rebase"; 
+            img.alt = "illustration d'un git rebase";
+            document.getElementById('abc').appendChild(img); 
+            //down.innerHTML = "Image Element Added.";  
+        }  
+      </script>
+      <h1 onclick="newDomBranch()">Titre principal</h1>
+      <ul>
+        <li>Premier point</li>
+        <li>Deuxième point</li>
+        <li>Troisième point</li>
+      </ul>
+      <div>
+        <div>
+          <h2>
+            <span>1</span>. Titre de la première section
+          </h2>
+          <p>
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a href="#">lien</a>.
+          </p>
+          <p>
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+          <h2><span>2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span id="abc">2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span>3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>-->
+
+<!--<html exo 18 creer une nouvelle branche du dom p2>
+  <body>
+    <head>
+      <script>
+        "use strict";
+        function newDomBranch2() { 
+            //var txt = document.createElement('a');
+            //document.body.appendChild(txt);
+            var odt = document.createTextNode(" objet de texte"); 
+            //txt.appendChild(odt); 
+            document.getElementById('toto').appendChild(odt);
+        }
+         
+      </script>
+      <h1>Titre principal</h1>
+      <ul>
+        <li onclick="newDomBranch2()" onclick="newDomBranch3">Premier point</li>
+        <li>Deuxième point</li>
+        <li>Troisième point</li>
+      </ul>
+      <div>
+        <div>
+          <h2>
+            <span>1</span>. Titre de la première section
+          </h2>
+          <p>
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a href="#">lien</a>.
+          </p>
+          <p>
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+          <h2><span>2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span>3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span id="toto">3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>-->
+
+<!--<html exo 19 bonnes pratiques pr gerer les ev>
+  <body>
+    <p id="t">test</p>
+    <script>
+      document.getElementById("t").addEventListener("click", function() {
+        alert("chargé");
+      });
+    </script>
+  </body>
+</html>-->
+
+<!--<html exo 20 pb de compat liés a la gestion des ev p1>
+  <body>
+    <div id="ascenseur"></div>
+    <style>
+      #ascenseur {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+    <script>
+      document
+        .getElementById("ascenseur")
+        .addEventListener("DOMMouseScroll", function(event) {
+          alert("this is a magic scroll");
+          console.log(event.detail);
+          var val =
+                (parseInt(
+                  document.getElementById("ascenseur").style.top,
+                  10
+                ) || 0) + 2;
+              document.getElementById("ascenseur").style.top = val + "px";
+        });
+
+    </script>
+  </body>
+</html>-->
+
+<!--<html exo 21 pb de compat liés a la gestion des ev p2>
+  <body>
+    <div id="lechat"></div>
+    <style>
+      #lechat {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+    <script>
+      window.addEventListener('mousemove', theCat);
+ 
+ function theCat(){
+     var _el = document.getElementById('lechat');
+     _el.style.top = event.clientY + "px";
+     _el.style.left = event.clientX + "px";
+ }
+    </script>
+  </body>
+</html>-->
+
+<html exo 22 emp le comp par def du nav de se prod>
+  <head>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("btn").addEventListener("click", function() {
+          alert(document.getElementById("field").value);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>para</p>
+    <!--<form action="http://www.google.com" method="GET">-->
+    <form>
+      <input id="field" type="text" />
+      <input id="btn" type="submit" />
+    </form>
+  </body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const field = document.getElementById("field");
+        const out = document.getElementById("out");
+
+        document
+          .getElementById("btn")
+          .addEventListener("click", function(event) {
+            event.preventDefault();
+
+            out.innerHTML = field.value;
+
+            field.value = "";
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <input id="field" type="text" placeholder="simple input" />
+      <input id="btn" type="submit" value="OK" />
+    </form>
+    <div id="out"></div>
+  </body>
+</html>-->

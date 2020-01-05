@@ -1,0 +1,144 @@
+<!--<html exo 5 util meth dom pr acceder a un el>
+    <head>
+        <script>
+            function myFunction() {
+                console.log(document.getElementById("test"));
+            }
+
+            function maFonction() {
+                document.getElementById("demo").innerHTML = "ce texte est écrit dans cette balise par mon script";
+            }
+        </script>
+    </head>
+    <body onload="myFunction()">
+        <h1 id="demo" onclick="maFonction()">titre principal</h1>
+        <p id="test">test</p>
+
+    </body>
+</html>-->
+
+<!--<html exo 6 faire le lien entre attributs html et prte du dom p1>
+    <head>
+      <script>
+        "use strict";
+        function charge() {
+            console.log("chargement");
+        }
+
+        function miFunction() {
+            document.getElementById("ancre").href = "http://www.bing.com/";
+            document.getElementById("ancre").title = "aller sur bing";
+            document.getElementById("anchor").href = "http://www.google.com/";
+            document.getElementById("anchor").title = "aller sur google";
+            //document.getElementById("lorem").innerHTML = "lorem";
+            //document.getElementById("ipsum").innerHTML = "ipsum";
+        }
+
+        function machin() {
+            alert("machin");
+        }
+      </script>
+    </head>
+<body onload="charge()">
+      <h1>Titre principal</h1>
+      <ul>
+        <li>Premier point</li>
+        <li>Deuxième point</li>
+        <li>Troisième point</li>
+      </ul>
+      <div>
+        <div>
+          <h2 onclick="miFunction()">
+            <span>1</span>. Titre de la première section
+          </h2>
+          <p id="lorem">
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a id="ancre" href="#">lien</a>.
+          </p>
+          <p id="ipsum">
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a id="anchor" href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+            <h2 onclick="machin()"><span>2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span>3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+  </body>
+</html>-->
+
+<!--<html exo 7 faire le lien entre attributs html et prte du dom p2>
+  <head>
+    <style>
+      .myStyle {
+        color: red;
+      }
+    </style>
+    <script>
+      "use strict";
+      function load() {
+        console.log("chargé");
+      }
+
+      function myFun() {
+        document.getElementById("myDiv").className = "myStyle";
+      }
+
+      function myFunc() {
+        document.getElementById("myDiv").className = "";
+      }
+    </script>
+  </head>
+  <body onload="load()">
+    <h1>Titre principal</h1>
+    <ul>
+      <li>Premier point</li>
+      <li>Deuxième point</li>
+      <li>Troisième point</li>
+    </ul>
+    <div>
+      <div id="myDiv" onmouseenter="myFun()" onmouseleave="myFunc()">
+        <h2>
+            <span>1</span>. Titre de la première section
+        </h2>
+        <p>
+          <span>1.1</span>. Premier paragraphe de la première section et un
+          <a href="#">lien</a>.
+        </p>
+        <p>
+          <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+          <a href="#">lien</a>.
+        </p>
+      </div>
+      <div>
+        <h2>
+            <span>2</span>. Titre de la deuxième section
+        </h2>
+        <p>
+            <span>2.1</span>. Premier paragraphe de la deuxième section.
+        </p>
+        <p>
+            <span>2.2</span>. Deuxième paragraphe de la deuxième section.
+        </p>
+      </div>
+      <div>
+        <h2>
+            <span>3</span>. Titre de la troisième section
+        </h2>
+        <p>
+            <span>3.1</span>. Premier paragraphe de la troisième section.
+        </p>
+        <p>
+            <span>3.2</span>. Deuxième paragraphe de la troisième section.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>-->

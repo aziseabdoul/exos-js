@@ -1,0 +1,362 @@
+<html>
+<script>
+    //exo 4
+    "use strict";
+    var enseignant = {
+        age: 40,
+        present: false,
+        nom: "Rogue",
+        prenom: "Severus",
+        matiere: "defense"
+    };
+
+    var classe = {
+        prop: [
+            1,
+            "magie",
+            enseignant
+        ],
+        eleves: [eleve1, eleve2, eleve3]
+    };
+
+    var eleve1 = {
+        age: 10,
+        present: true,
+        nom: "Potter",
+        prenom: "Harry"
+    };
+
+    var eleve2 = {
+        age: 10,
+        present: true,
+        nom: "Granger",
+        prenom: "Hermione"
+    };
+
+    var eleve3 = {
+        age: 10,
+        present: true,
+        nom: "Weasley",
+        prenom: "Ron"
+    };
+    eleve2.present = false;
+    if (eleve1.present === true) {
+        alert("Je suis " + eleve1.prenom + " " + eleve1.nom + " et je suis présent.");
+
+    };
+    if (eleve2.present === true) {
+        alert("Je suis " + eleve2.prenom + " " + eleve2.nom + " et je suis présent.");
+
+    };
+    if (eleve3.present === true) {
+        alert("Je suis " + eleve3.prenom + " " + eleve3.nom + " et je suis présent.");
+
+    };
+</script>
+
+<script>
+    //exo 5
+    "use strict";
+
+    function Robot(numeroSerie, couleur) {
+
+        this.numeroSerie = numeroSerie,
+            this.numeroModele = 1,
+            this.nomUsage = "",
+            this.couleur = couleur,
+            this.matiere = "alu",
+            this.dureeGarantie = "un an"
+
+    };
+
+    var bot = new Robot(1, "bleu");
+    var bot2 = new Robot(2, "blanc");
+    var bot3 = new Robot(3, "rouge");
+    var bot4 = new Robot(4, "noir");
+    var bot5 = new Robot(5, "jaune");
+    var bot6 = new Robot(6, "vert");
+    var bot7 = new Robot(7, "violet");
+    var bot8 = new Robot(8, "marron");
+    var bot9 = new Robot(9, "rose");
+    var bot10 = new Robot(10, "gris");
+    var bot11 = new Robot(11, "orange");
+    var bot12 = new Robot(12, "black");
+
+    var magasin = [bot,
+        bot2,
+        bot3,
+        bot4,
+        bot5,
+        bot6,
+        bot7,
+        bot8,
+        bot9,
+        bot10,
+        bot11,
+        bot12
+    ];
+
+    for (var i = 0; i < magasin.length; i++) {
+        this.nomUsage = this.numeroModele + this.numeroSerie;
+    };
+</script>
+
+<script>
+    //exo 6
+    "use strict";
+    var robot = {
+        numeroSerie: 1,
+        numeroModele: 1,
+        nomUsage: "",
+        couleur: "",
+        matiere: "",
+        dureeGarantie: "",
+        nombreDeBonjour: 0,
+        bonjour: function () {
+            this.nombreDeBonjour++;
+            alert("Bonjour humain ! Je m'appelle " + robot.numeroSerie + robot.numeroModele);
+        }
+    };
+
+
+    for (var i = 0; i < 3; i++) {
+        robot.bonjour();
+    };
+</script>
+
+<script>
+    //exo 7
+    "use strict";
+    var monObjet = {
+        e: function () {
+            alert(this.t);
+        },
+        r: true,
+        t: "Ceci est un texte dans un objet",
+
+    };
+
+    var monAutreObjet = {
+        e: [function () {
+            alert("Vous êtes ici !");
+        }, true],
+        r: false,
+        t: function () {
+            this.y = {
+                e: function () {
+                    alert("Ou suis je ? Qui suis je ?");
+                }
+            };
+            alert("Desormais ma propriété y contient un objet");
+        }
+    };
+
+    alert(monObjet.r);
+    alert(monAutreObjet.r);
+    alert(monAutreObjet.e[0]());
+
+    monAutreObjet.t();
+    alert(monAutreObjet.y.e());
+</script>
+
+<script>
+    //exo 8
+    "use strict";
+    var maison = {
+        adresse: "10 downing st",
+        chambre: null
+    };
+
+    var uneChambre = {
+        lit: "matelas",
+        quelEstMonAdresse: function () {
+            alert(this.maison.adresse);
+        },
+        maison: maison
+    };
+
+    maison.chambre = uneChambre;
+
+    alert(maison.chambre.lit);
+    alert(uneChambre.quelEstMonAdresse());
+</script>
+
+<script>
+    //exo 1 proto
+    "use strict";
+    var concorde = {
+        modele: "",
+        capacity: 150,
+        prix: 500000000,
+        passagers: [],
+        reservoir: 100,
+        couleur: ["blanc"]
+    };
+
+    var cie1 = {
+        compagnie1: {
+            value: "Air France",
+            writable: true,
+            enumerable: true,
+            configurable: true
+        }
+    }
+
+    var airbus = Object.create(concorde, cie1);
+
+    var cie2 = {
+        compagnie2: {
+            value: "British Airways",
+            writable: true,
+            enumerable: true,
+            configurable: true
+        }
+    }
+    var airbus2 = Object.create(concorde, cie2);
+</script>
+
+<script>
+    // exo 2 proto
+    var mammouth = function (age, poids, espece, fourrure, genre) {
+        this.age = age,
+            this.poids = poids,
+            this.espece = espece,
+            this.fourrure = fourrure,
+            this.genre = genre,
+            this.barrir = function () {
+                alert("barrir");
+            }
+    };
+
+    var elephant = function (poids, espece, fourrure) {
+        this.poids = poids,
+            this.espece = espece,
+            this.fourrure = fourrure,
+            this.mangerDesCacahuetes = function () {
+                alert("cacahuètes");
+            }
+    };
+
+    var mammouth1 = new mammouth(30, 2500, "europe", true, "male");
+
+    elephant.prototype = mammouth1;
+
+    var elephant1 = new elephant(2000, "africa", false);
+    var elephant2 = new elephant(1900, "asia", false);
+
+    elephant1.barrir();
+    elephant1.mangerDesCacahuetes();
+    elephant2.barrir();
+    elephant2.mangerDesCacahuetes();
+</script>
+
+<script>
+    //exo 1 obj fonda
+    "use strict";
+
+    var nombre = prompt("saisir un nombre");
+
+    alert(Math.ceil(nombre));
+
+    alert(Math.floor(nombre));
+</script>
+
+<script>
+    //exo2 OF
+    "use strict";
+
+    var caracteres = prompt("saisir une chaine de caractères");
+
+    alert(caracteres.length);
+
+    alert(caracteres.substr(1, caracteres.length - 2));
+
+    var tableau = caracteres.split(" ");
+
+    for (var i = 0; i < tableau.length; i++) {
+        alert(tableau[i]);
+    };
+</script>
+
+<script>
+    //exo 3 OF
+    "use strict";
+
+    var table = ["en",
+        "java",
+        "script",
+        "les",
+        "tableaux",
+        "sont",
+        "en",
+        "realité",
+        "des",
+        "objets"
+    ];
+
+    alert(table.join(" "));
+
+    table.push("ajoutons", "trois", "mots");
+
+    alert(table.join(" "));
+
+    for (var i = 0; i < 3; i++) {
+        table.shift();
+    };
+
+    var table2 = ["en", "java", "script"];
+
+    var table3 = table2.map(function (value) {
+        return value.toUpperCase();
+    });
+
+    alert(table3.join(" "));
+</script>
+
+<script>
+    //exo 4 OF
+    "use strict";
+
+    var date = new Date();
+    alert(date);
+
+    var finDuCours = new Date("October 3, 2019 17:00:00");
+    alert(finDuCours);
+
+    var machin = finDuCours - date;
+
+    alert(machin);
+</script>
+
+<script>
+    function Rebour() {
+        var date1 = new Date();
+        var date2 = new Date("Oct 3 17:00:00 2019");
+
+        var sec = (date2 - date1) / 1000;
+
+        var n = 24 * 3600;
+
+        if (sec > 0) {
+
+            j = Math.floor(sec / n);
+
+            h = Math.floor((sec - (j * n)) / 3600);
+
+            mn = Math.floor((sec - ((j * n + h * 3600))) / 60);
+
+            sec = Math.floor(sec - ((j * n + h * 3600 + mn * 60)));
+
+            alert("Temps restant : " + j + " j " + h + " h " + mn + " min " + sec + " s ");
+
+        };
+
+    };
+
+    alert(Rebour());
+</script>
+
+<script>
+
+</script>
+</html>

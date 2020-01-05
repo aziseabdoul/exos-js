@@ -1,0 +1,35 @@
+<!--<html exo 3 modif prte dom>
+    <head>
+        <script>
+            "use strict";
+            //alert(window.document.title);
+            function changeTitle() {
+                if(document.title === "Ceci est un nouveau titre") {
+                    document.title = "titre";
+                } else {
+                    document.title = "Ceci est un nouveau titre";
+                }
+           }
+        </script>
+    </head>
+        <p>paragraphe</p>
+            <title>Ceci est un nouveau titre</title>
+                <h1 onclick="changeTitle()">titre de la 1ere section</h1>
+                
+</html>-->
+
+<html exo 4 meca chargmt dom>
+    <head>
+         <script>
+            "use strict";
+            function DOMbody() {
+                console.log(window.document.body);
+                console.dir(window.document.body);
+                document.body.bgColor="lime";
+            }
+        </script>
+    </head>
+    <body onload="DOMbody()">
+        <p>paragraphe</p>
+    </body>
+</html>

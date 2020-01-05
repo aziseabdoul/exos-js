@@ -1,0 +1,443 @@
+<!--exo 1 console-->
+<!--<html>
+    <head>
+        <p>paragraphe</p>
+        <script>
+            "use strict";
+            window.console.log("un texte");
+            window.console.log("%cmessage vert", "color: green; font-weight: bold; font-size: 20px;");
+        </script>
+    </head>
+</html>-->
+
+<!--//exo 2 navigator-->
+<!--<html>
+    <head>
+        <p>paragraphe</p>
+        <script>
+            "use strict";
+            //alert(window.navigator.appName);
+            //alert(window.navigator.userAgent);
+            if(navigator.userAgent=="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134"){
+               alert("So lame");
+             }
+             else if(navigator.userAgent=="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"){
+               alert("Spy on me");
+             } else {
+                 alert("freed from desire");
+             }
+        </script>
+    </head>
+</html>-->
+
+<html exo 3 modif prte dom, faire partie 2 et 3>
+    <head>
+        <title>titre</title>
+        <p>paragraphe</p>
+        <script>
+            "use strict";
+            alert(window.document.title);
+        </script>
+    </head>
+</html>
+
+<!--<html exo 4 meca chargmt dom, faire partie 4>
+    <head>
+        <body>
+        <p>paragraphe</p>
+        <script>
+            "use strict";
+            console.log(window.document.body);
+            console.dir(window.document.body);
+            HTMLBodyElement.bgColor="lime";
+        </script>
+    </head>
+        </body>
+</html>-->
+
+<!--<html exo 5 meth dom pr acceder a un element, a faire>
+    <body>
+        <head>
+            <p id="par">paragraphe</p>
+            <script>
+            "use strict";
+            console.dir(document.getElementById(par));
+            </script>
+        </head>
+    </body>
+</html>-->
+
+<!--<html exo 6 et 7 faire le lien entre attributs html et prte du dom>
+  <body>
+    <head>
+      <script>
+        "use strict";
+      </script>
+      <h1>Titre principal</h1>
+      <ul>
+        <li>Premier point</li>
+        <li>Deuxième point</li>
+        <li>Troisième point</li>
+      </ul>
+      <div>
+        <div>
+          <h2>
+            <span</span>. Titre de la première section
+          </h2>
+          <p>
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a href="#">lien</a>.
+          </p>
+          <p>
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+          <h2><span>2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span>3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>-->
+
+<!--<html exo 8 modif prtes de style des elmts p1>
+  <body>
+    <head>
+      <script>
+        "use strict";
+        function un() {
+          var sp1 = document.getElementById("sp1");
+          sp1.style.color = "blue";
+          sp1.style.fontWeight = "normal";
+          sp1.style.fontSize = "34px";
+        }
+        function deux() {
+          var sp2 = document.getElementById("sp2");
+          sp2.style.color = "blue";
+          sp2.style.fontWeight = "normal";
+          sp2.style.fontSize = "34px";
+        }
+
+        function trois(){
+          var sp3 = document.getElementById("sp3");
+          sp3.style.color = "blue";
+          sp3.style.fontWeight = "normal";
+          sp3.style.fontSize = "34px";
+        }
+
+        function quatre(){
+          var sp1 = document.getElementById("sp1");
+          sp1.style.color = "black";
+          sp1.style.fontWeight = "bold";
+          sp1.style.fontSize = "24px";
+
+          var sp2 = document.getElementById("sp2");
+          sp2.style.color = "black";
+          sp2.style.fontWeight = "bold";
+          sp2.style.fontSize = "24px";
+
+          var sp3 = document.getElementById("sp3");
+          sp3.style.color = "black";
+          sp3.style.fontWeight = "bold";
+          sp3.style.fontSize = "24px";
+        }
+      </script>
+      <h1 id="tp" onmouseover="quatre()">Titre principal</h1>
+      <ul>
+        <li onclick="un()">Premier point</li>
+        <li onclick="deux()">Deuxième point</li>
+        <li onclick="trois()">Troisième point</li>
+      </ul>
+      <div>
+        <div>
+          <h2>
+            <span id="sp1">1</span>. Titre de la première section
+          </h2>
+          <p>
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a href="#">lien</a>.
+          </p>
+          <p>
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+          <h2><span id="sp2">2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span id="sp3">3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>-->
+
+<!--<html exo 9 modif prte de style des elmts p2>
+  <body onload="un()">
+    <head>
+      <script>
+        "use strict";
+        function un() {
+          var div = document.getElementById("div");
+          div.style.display = "none";
+        }
+
+        function deux() {
+          var div = document.getElementById("div");
+          div.style.display = "";
+        }
+
+        function trois() {
+          var div = document.getElementById("div");
+          div.style.display = "none";
+        }
+      </script>
+      <h1 onmouseover="deux()" onmouseout="trois()">Titre principal</h1>
+      <ul>
+        <li>Premier point</li>
+        <li>Deuxième point</li>
+        <li>Troisième point</li>
+      </ul>
+      <div id="div">
+        <div>
+          <h2><span>1</span>. Titre de la première section</h2>
+          <p>
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a href="#">lien</a>.
+          </p>
+          <p>
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+          <h2><span>2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span>3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>-->
+
+<!--<html exo 10 modif prte de style des elmts p3>
+  <body onload="un()">
+    <head>
+      <script>
+        "use strict";
+        function un() {
+          var div = document.getElementById("div");
+          if (div.style.display === "none") {
+            div.style.display = "";
+          } else {
+            div.style.display = "none";
+          }
+        }
+      </script>
+      <h1 onclick="un()">Titre principal</h1>
+      <ul>
+        <li>Premier point</li>
+        <li>Deuxième point</li>
+        <li>Troisième point</li>
+      </ul>
+      <div id="div">
+        <div>
+          <h2><span>1</span>. Titre de la première section</h2>
+          <p>
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a href="#">lien</a>.
+          </p>
+          <p>
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+          <h2><span>2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span>3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>-->
+
+<!--<html exo 11 creer anim p1>
+  <body>
+    <head>
+      <script>
+        "use strict";
+        function addMargin() {
+           var marginLeft = document.getElementById("title").style.marginLeft;
+           console.log(marginLeft);
+           if (!marginLeft) {
+               document.getElementById("title").style.marginLeft = "2px"
+           } else {
+               document.getElementById("title").style.marginLeft =
+                   `${parseFloat(document.getElementById('title').style.marginLeft) + 2}px`;
+           }
+       }
+        
+      </script>
+      <h1 id="title" onclick="addMargin()">Titre principal</h1>
+      <ul>
+        <li>Premier point</li>
+        <li>Deuxième point</li>
+        <li>Troisième point</li>
+      </ul>
+      <div>
+        <div>
+          <h2><span>1</span>. Titre de la première section</h2>
+          <p>
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a href="#">lien</a>.
+          </p>
+          <p>
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+          <h2><span>2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span>3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>-->
+
+<!--<html exo 12 et 14 creer anim p2>
+  <body>
+    <head>
+      <style type="text/css">
+        h1 {
+          position: absolute;
+        }
+      </style>
+      <script>
+        "use strict";
+        function myMove() {
+          var elem = document.getElementById("myAnimation");
+          var pos = 0;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (pos == 350) {
+              clearInterval(id);
+            } else {
+              pos++;
+              elem.style.top = pos + 'px';
+              elem.style.left = pos + "px";
+            }
+          }
+        }
+
+        
+      </script>
+      <h1 id="myAnimation" onclick="myMove()" onmouseover="op()">Titre principal</h1>
+      <ul>
+        <li>Premier point</li>
+        <li>Deuxième point</li>
+        <li>Troisième point</li>
+      </ul>
+      <div>
+        <div>
+          <h2><span>1</span>. Titre de la première section</h2>
+          <p>
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a href="#">lien</a>.
+          </p>
+          <p>
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+          <h2><span>2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span>3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>-->
+
+<html exo 13 creer anim p3>
+  <body>
+    <head>
+      <script>
+        "use strict";
+        function augmenterLaMarge(){
+        var taille=document.getElementById("ceParagraphe").style.fontSize="15px";
+        function aug(){var test=parseInt(taille);
+        var final = test+2 +"px";}
+    };
+
+      </script>
+      <h1 id="ceParagraphe" onclick="augmenterLaMarge()">
+        Titre principal
+      </h1>
+      <ul>
+        <li>Premier point</li>
+        <li>Deuxième point</li>
+        <li>Troisième point</li>
+      </ul>
+      <div>
+        <div>
+          <h2><span>1</span>. Titre de la première section</h2>
+          <p>
+            <span>1.1</span>. Premier paragraphe de la première section et un
+            <a href="#">lien</a>.
+          </p>
+          <p>
+            <span>1.2</span>. Deuxième paragraphe de la deuxième section et un
+            <a href="#">lien</a>.
+          </p>
+        </div>
+        <div>
+          <h2><span>2</span>. Titre de la deuxième section</h2>
+          <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+          <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+        </div>
+        <div>
+          <h2><span>3</span>. Titre de la troisième section</h2>
+          <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+          <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>
